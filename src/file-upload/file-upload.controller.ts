@@ -8,7 +8,7 @@ import { extname } from 'path';
 export class FileUploadController {
   constructor(private readonly fileUploadService: FileUploadService) {}
 
-  @Post('upload')
+  @Post()
   @UseInterceptors(FileInterceptor('file', {
     storage: diskStorage({
       destination: './uploads',
